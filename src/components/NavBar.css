@@ -1,0 +1,139 @@
+.nav {
+    align-self: center;
+}
+
+
+.mobile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger {
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.close {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-container {
+    background-color: white;
+    position: absolute;
+    min-width: 15rem;
+    max-width: 17rem;
+    margin-top: 60%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 7px 20px 1px var(--dark-grayish-blue);
+}
+
+.menu-container ul {
+    list-style: none;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--very-dark-blue);
+}
+
+.menu-container ul li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.menu-container ul li:nth-child(1) {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.menu-container ul li:nth-child(3) {
+    padding-bottom: 1rem;
+}
+
+.menu-container ul li:nth-child(4) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--dark-grayish-blue);
+    border-top: 1px solid var(--grayish-blue);
+}
+
+.menu-container ul li:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+@media(min-width: 400px) {
+
+    .mobile-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+
+    
+    .hamburger {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .menu-container {
+        flex-grow: 2;
+        display: inline;
+        position: relative;
+        background-color: white;
+        min-width: auto;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: none;
+        margin-right: 1.2rem;
+    }
+
+    .menu-container ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        column-gap: 1.5rem;
+    }
+
+    .menu-container ul li:nth-child(1) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .menu-container ul li:nth-child(3) {
+        padding-bottom: 0;
+    }
+    
+    .menu-container ul li:nth-child(4) {
+        padding-top: 0;
+        padding-bottom: 0;
+        color: var(--dark-grayish-blue);
+        border-top: none;
+    }
+
+    .menu-container ul li {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+}
+
