@@ -6,7 +6,10 @@ import Image from './assets/images/illustration-devices.svg';
 function App() {
   return (
     <div className="App">
-     
+      <div className='background'>
+
+      </div>
+
       <div  className='navbar'>
         <NavBar />
       </div>

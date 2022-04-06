@@ -5,6 +5,17 @@
     width: 20rem;
 }
 
+.background {
+    position: absolute;
+    background-color: var(--light-grayish-blue);
+    width: 70%;
+    height: 60%;
+    z-index: -1;
+    right: 0;
+    justify-self: right;
+    border-bottom-left-radius: 3rem;
+}
+
 .img-container {
     width: 20rem;
     overflow: hidden;
@@ -41,5 +52,17 @@
     .device {
         margin: 0;
         height: 100%;
+    }
+
+
+    .background {
+        position: absolute;
+        background-color: var(--light-grayish-blue);
+        width: 70%;
+        height: 60%;
+        z-index: -1;
+        float: right;
+        justify-self: right;
+        border-bottom-left-radius: 3rem;
     }
 }

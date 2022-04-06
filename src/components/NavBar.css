@@ -46,6 +46,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     color: var(--very-dark-blue);
+    background-color: var(--light-grayish-blue);
 }
 
 .menu-container ul li {

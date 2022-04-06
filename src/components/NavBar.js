@@ -1,4 +1,5 @@
 import React from 'react';
+
 import close from '../assets/images/icon-close.svg';
 import hamburger from '../assets/images/icon-hamburger.svg';
 import logo from '../assets/images/logo.svg';
@@ -8,14 +9,15 @@ import './NavBar.css';
 const NavBar = ( props ) => {
 
     const [showMenu, setShowMenu] = React.useState(false);
+
+    let width = window.innerWidth;
+
+    const [widthWindow, setWidthWindow] = React.useState(width)
+
+    window.addEventListener('resize', () => {
+        setWidthWindow(window.innerWidth);
+    })
     
-    window.addEventListener('resize', () =>{
-        let mqlist = window.matchMedia('(min-width:400px');
-        if(mqlist.matches)
-            setShowMenu(true);
-        else
-            setShowMenu(false);
-    });
 
     
     return (
@@ -45,9 +47,9 @@ const NavBar = ( props ) => {
                         :
                         null
                 }
-
+                
                 {
-                (showMenu) ?
+                    (showMenu || widthWindow > 400) ?
                     <div className='menu-container' >
                         <ul className='barlow-condensed'>
                             <li>Product</li>
@@ -55,11 +57,10 @@ const NavBar = ( props ) => {
                             <li>Pricing</li>
                             <li>Login</li>
                         </ul>
-                    </div> 
+                    </div>
                     :
                     null
                 }
-
             </div>
         </div>
     );
